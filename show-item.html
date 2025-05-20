@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${item.title}"/>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body class="body-index">
+<div class="body-index1">
+  <div th:replace="layouts/header::header"></div>
+
+  <main class="main">
+    <div class="items" >
+      <div class="product-card" >
+       <img class="product-image" th:src="@{${item.image}}" alt="Фото">
+        <h3 class="product-title" th:text="${item.title}"></h3>
+        <h4 class="product-info" th:text="${item.info}"></h4>
+        <span class="product-price" th:text="${item.price + ' ₴'}"></span>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+</body>
+</html>

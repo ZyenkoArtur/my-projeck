@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Додати товар</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body class="body-add">
+<form class="add-form" method="post" enctype="multipart/form-data">
+    <input type="text" name="title" placeholder="Ведіть назву">
+    <input type="file" name="photo" accept="image/*" />
+    <input type="number" name="price" placeholder="Ведіть ціну">
+    <textarea name="info" placeholder="Ведіть опис товару"></textarea>
+    <button type="submit">Додати</button>
+</form>
+</body>
+</html>
